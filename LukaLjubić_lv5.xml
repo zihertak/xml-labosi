@@ -1,0 +1,123 @@
+1. 
+<student JMBAG="0246116868">
+  <ime>Luka</ime>
+  <prezime>Ljubić</prezime>
+  <datum_rodjenja>2004-07-31</datum_rodjenja>
+  <smjer>Informatika</smjer>
+  <predmeti>
+    <predmet>XML programiranje</predmet>
+    <predmet>Analiza tabličnih podataka</predmet>
+    <predmet>Baze podataka</predmet>
+    <predmet>Engleski 2</predmet>
+  </predmeti>
+  <najtezi_predmet>Objektno programiranje</najtezi_predmet>
+</student>
+
+
+2.
+<nekretnina>
+  <vrsta>kuća</vrsta>
+  <adresa>
+    <ulica>Primorska ulica 45</ulica>
+    <grad>Split</grad>
+    <drzava>Hrvatska</drzava>
+    <postanski_broj>21000</postanski_broj>
+  </adresa>
+  <povrsina>
+    <ukupna>150</ukupna>
+    <terasa>25</terasa>
+    <okucnica>50</okucnica>
+  </povrsina>
+  <broj_soba>4</broj_soba>
+  <broj_kupatila>3</broj_kupatila>
+  <cijena valuta="HRK">3500000</cijena>
+  <godina_izgradnje>2010</godina_izgradnje>
+  <opis>Predivna obiteljska kuća s pogledom na more, moderno uređena i prostrana.</opis>
+  <slike>
+    <slika url="https://primjer.com/slika1.jpg" />
+    <slika url="https://primjer.com/slika2.jpg" />
+    <slika url="https://primjer.com/slika3.jpg" />
+  </slike>
+</nekretnina>
+
+
+
+3.
+<Student>
+  <JMBAG>0246116868</JMBAG>
+  <Ime>Luka</Ime>
+  <Prezime>Ljubić</Prezime>
+  <DatumRodjenja>2004-07-31</DatumRodjenja>
+  <Spol>M</Spol>
+  <Studij>
+    <Naziv>Informatika</Naziv>
+    <Razina>Preddiplomski</Razina>
+  </Studij>
+  <Upisi>
+    <Upis>
+      <AkademskaGodina>2024/2025</AkademskaGodina>
+      <Semestar>4</Semestar>
+      <Predmeti>
+        <Predmet>
+          <Sifra>SIF11</Sifra>
+          <Naziv>XML</Naziv>
+          <ECTS>5</ECTS>
+        </Predmet>
+        <Predmet>
+          <Sifra>SIF12</Sifra>
+          <Naziv>Baze podataka</Naziv>
+          <ECTS>5</ECTS>
+        </Predmet>
+      </Predmeti>
+    </Upis>
+  </Upisi>
+</Student>
+
+
+
+4.
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="property">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="type" type="xs:string"/>
+        <xs:element name="description" type="xs:string"/>
+        <xs:element name="address">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="street" type="xs:string"/>
+              <xs:element name="city" type="xs:string"/>
+              <xs:element name="zip" type="xs:integer"/>
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="price" type="xs:integer"/>
+        <xs:element name="year_built" type="xs:integer"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+
+
+5.
+1
+//student/ime/text()
+
+2
+//student[1]/predmeti/predmet/naziv/text()
+
+3
+string-length(//student[2]/JMBAG)
+
+4
+count(//student)
+
+5
+//predmet[@skraceno]/sifra/text()
+
+6
+count(//student[ime='Petar'])
+
+7
+concat(//student[last()]/ime, ', ', //student[last()]/prezime, ', ', //student[last()]/JMBAG)
