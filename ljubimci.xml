@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kucni_ljubimci>
+  <ljubimac id="1">
+    <ime>Max</ime>
+    <vrsta>Pas</vrsta>
+    <pasmina>Labrador</pasmina>
+    <starost>5</starost>
+    <vlasnik>
+      <ime_vlasnika>Ivan</ime_vlasnika>
+      <kontakt>ivan@example.com</kontakt>
+    </vlasnik>
+  </ljubimac>
+  <ljubimac id="2">
+    <ime>Maca</ime>
+    <vrsta>Mačka</vrsta>
+    <pasmina>Perzijska</pasmina>
+    <starost>3</starost>
+    <vlasnik>
+      <ime_vlasnika>Ana</ime_vlasnika>
+      <kontakt>ana@example.com</kontakt>
+    </vlasnik>
+  </ljubimac>
+</kucni_ljubimci>
